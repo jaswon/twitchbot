@@ -1,4 +1,4 @@
 import cfg
 
 def chat(s, msg):
-	s.send("PRIVMSG #{} :{}".format(cfg.CHAN, msg))
+	s.send("PRIVMSG #{} :{}\r\n".format(cfg.CHAN, msg).encode("utf-8"))
